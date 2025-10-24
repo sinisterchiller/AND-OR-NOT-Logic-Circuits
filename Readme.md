@@ -1,4 +1,4 @@
-# ECE 210 – AND-OR-NOT Logic Circuits (Lab 1)
+# AND-OR-NOT Logic Circuits 
 
 ## 📚 Overview
 This repository contains the **Lab 1** report for the University of Alberta's **ECE 210: Digital Logic Design** course.  
