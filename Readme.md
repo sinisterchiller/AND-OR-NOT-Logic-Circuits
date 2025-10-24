@@ -1,57 +1,38 @@
-# AND-OR-NOT Logic Circuits 
+# AND-OR-NOT Logic Circuit Experiment
 
-## 📚 Overview
-This repository contains the **Lab 1** report for the University of Alberta's **ECE 210: Digital Logic Design** course.  
-The objective of this experiment was to design, implement, and verify a logic circuit using **AND**, **OR**, and **NOT** gates, both on a breadboard and in **VHDL** on an FPGA.
+## 🔍 Overview
+This project demonstrates the design and verification of a basic digital logic circuit using **AND**, **OR**, and **NOT** gates.  
+The circuit converts four binary inputs into two defined outputs based on simplified Boolean expressions derived from a truth table.
 
-## 🧠 Objective
-- Simplify a 4-input, 2-output truth table using **Karnaugh Maps (K-Maps)**  
-- Implement the derived Boolean expressions using **AND**, **OR**, and **NOT** logic chips  
-- Validate the circuit through:
-  - **Analog Discovery 2** (WaveForms patterns)
-  - **VHDL simulation** and FPGA deployment (Zybo Z7)
+## 🎯 Objective
+- Simplify Boolean functions using **Karnaugh Maps (K-Maps)**
+- Build and test the logic circuit using discrete ICs
+- Simulate and verify results with **WaveForms** and **Vivado**
+- Implement the design on an **FPGA (Zybo Z7)**
 
-## ⚙️ Design Summary
-- **Inputs:** A, B, C, D  
-- **Outputs:** F₁, F₂  
-- **Chips used:**  
-  - `SN74HC08N` – Quad 2-input AND Gate  
-  - `SN74HC04N` – Hex Inverter (NOT Gate)  
-- **Software tools:** WaveForms 2, Vivado Design Suite  
-- **Hardware:** Analog Discovery 2, Zybo Z7 FPGA board  
-- **Support components:** 10 kΩ pull-down resistors, breadboard, jumper wires  
+## ⚙️ Components & Tools
+- **Logic ICs:** SN74HC08N (AND), SN74HC04N (NOT)
+- **Additional Parts:** 10 kΩ pull-down resistors, breadboard, jumper wires
+- **Equipment & Software:** Analog Discovery 2, WaveForms, Vivado Design Suite
 
-## 🧩 Methodology
-1. Construct truth tables for outputs F₁ and F₂  
-2. Simplify using **K-Maps**  
-3. Derive Boolean equations  
-4. Build circuit on a breadboard with the Analog Discovery 2  
-5. Test logic responses in **WaveForms**  
-6. Implement logic equations in **VHDL**  
-7. Simulate and verify correctness in **Vivado**  
-8. Program and test on Zybo Z7 FPGA board  
+## 🧩 Method
+1. Start from a 4-input, 2-output truth table  
+2. Simplify logic equations using **K-Maps**  
+3. Create the schematic and build on a breadboard  
+4. Verify operation using WaveForms pattern generation  
+5. Implement and simulate the same logic in VHDL on the Zybo Z7  
+6. Test LED and switch outputs to confirm correctness
 
 ## 📈 Results
-- Verified correctness of F₁ and F₂ for all input combinations.  
-- Timing issues observed when re-using ICs across phases; resolved with a 3-chip design.  
-- Final implementation matched both the truth table and VHDL simulation outputs.
+- Circuit and VHDL simulation both produced correct outputs  
+- Observed timing limitations when reusing gates across phases  
+- Final 3-chip design eliminated timing issues and matched expectations
 
-## 🧪 Discussion
-- Demonstrated practical design-verification workflow from truth table → K-Map → schematic → FPGA test.  
-- Showed importance of **timing constraints** and **circuit phase management**.  
-- Future improvement: use **NAND-based implementation** for efficiency.
-
-## 🧾 References
-1. Department of Electrical and Computer Engineering, *General Lab Report Style Guide*, University of Alberta, Fall 2017.  
-2. Department of Electrical and Computer Engineering, *ECE 210 Lab 1 Manual (Revised)*, University of Alberta, Fall 2014.  
-3. Texas Instruments, *CD74HCT04 High-Voltage CMOS Logic Hex Inverter*, Datasheet, Oct 2019.  
-4. Texas Instruments, *CD74HCT08 High-Speed CMOS Logic Quad 2-Input AND Gate*, Datasheet, Oct 2019.
-
-## 👥 Authors
-- **Anurag Koushik** (ID: 1806274, akoushik)  
-- **James Wright** (ID: 1801348, jtwrigh1)  
-- **Lab Instructors:** Md Anik Hossain, Mohammad Hadi Masoumi  
-- **Date of Lab:** October 15, 2024
+## 💬 Discussion
+This experiment illustrates how Boolean simplification improves efficiency in digital systems.  
+It highlights the importance of timing synchronization when combining physical ICs and shows how FPGA simulation can validate discrete designs before hardware deployment.
 
 ## 📄 License
-See [LICENSE](./LICENSE) for licensing details.
+This work is licensed under the **Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.  
+You may share and adapt this work for non-commercial use with proper attribution.  
+See the [LICENSE](./LICENSE) file for details.
